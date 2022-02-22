@@ -12,4 +12,4 @@ WORKDIR /usr/share/nginx/html
 
 # RUN npm run compile:scss
 
-CMD ["/bin/sh", "entrypoint.sh"]
+CMD ["/bin/sh", "./entrypoint.sh"]
