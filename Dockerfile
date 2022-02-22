@@ -8,8 +8,6 @@ COPY ./app /usr/share/nginx/html
 
 WORKDIR /usr/share/nginx/html
 
-# RUN npm install
+RUN npm install
 
-# RUN npm run compile:scss
-
-CMD ["/bin/sh", "entrypoint.sh"]
+RUN npm run compile:scss
