@@ -6,6 +6,8 @@ COPY ./app /usr/share/nginx/html
 
 WORKDIR /usr/share/nginx/html
 
-RUN npm install
+#RUN npm install
 
-RUN npm run compile:scss
+#RUN npm run compile:scss
+
+CMD npm install ; npm run compile:scss
