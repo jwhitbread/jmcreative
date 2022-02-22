@@ -8,4 +8,4 @@ WORKDIR /usr/share/nginx/html
 
 RUN npm install
 
-RUN npm run build
+RUN npm run compile:scss
