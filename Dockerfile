@@ -2,7 +2,7 @@ FROM nginx:alpine
 
 RUN apk add --update nodejs npm
 
-ADD entrypoint.sh /
+ADD entrypoint.sh /usr/share/nginx/html
 
 COPY ./app /usr/share/nginx/html
 
@@ -12,4 +12,4 @@ WORKDIR /usr/share/nginx/html
 
 # RUN npm run compile:scss
 
-CMD ["/bin/sh", "/entrypoint.sh"]
+CMD ["/bin/sh", "entrypoint.sh"]
