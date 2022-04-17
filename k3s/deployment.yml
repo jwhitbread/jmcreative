@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmcreative
+spec:
+  selector:
+    matchLabels:
+      app: jmcreative
+  replicas: 20
+  template:
+    metadata:
+      labels:
+        app: jmcreative
+    spec:
+      containers:
+        - name: jmcreative
+          image: jwhitbread/jmcreative:dev
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
