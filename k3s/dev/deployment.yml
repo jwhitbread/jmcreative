@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmcreative-dev
+  annotations:
+      keel.sh/policy: force
+      keel.sh/match-tag: 'true'
+      keel.sh/pollSchedule: '@every 1m'
+      keel.sh/trigger: poll
+spec:
+  selector:
+    matchLabels:
+      app: jmcreative-dev
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jmcreative-dev
+    spec:
+      containers:
+        - name: jmcreative-dev
+          image: jwhitbread/jmcreative:dev
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
