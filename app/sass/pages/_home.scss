@@ -187,6 +187,39 @@
   }
 }
 
+.certificates_main_content {
+  display: flex;
+}
+.certificates_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;}
+  @media only screen and (max-width: 56.25em) {
+    .certificates_row {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+.certificate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.certificates_row-img {
+  display: flex;
+  width: 50%
+}
+.certificates_row-content-desc {
+  display: flex;
+  margin-top: 10%;
+  font-size: 1.8rem;
+  color: rgb(0, 140, 255)}
+  @media only screen and (max-width: 56.25em) {
+    .certificates_row-content-desc {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px; } }
+
 .contact {
   background: linear-gradient(
       to right,

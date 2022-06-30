@@ -12,7 +12,7 @@ spec:
   selector:
     matchLabels:
       app: jmcreative
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: jmcreative
-          image: jwhitbread/jmcreative:dev
+          image: jwhitbread/jmcreative:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
