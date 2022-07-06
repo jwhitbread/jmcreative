@@ -7,6 +7,6 @@ spec:
   selector:
     app: jmcreative
   ports:
-    - port: 3457
+    - port: 3456
       targetPort: 80
   type: LoadBalancer
