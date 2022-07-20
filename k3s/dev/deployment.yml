@@ -12,7 +12,7 @@ spec:
   selector:
     matchLabels:
       app: jmcreative-dev
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -24,3 +24,14 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 80
+            
+          livenessProbe:
+            exec:
+              command:
+              - curl
+              - --fail
+              - https://dev.jmcreative.me/health_check
+            initialDelaySeconds: 10
+            timeoutSeconds: 30
+            failureThreshold: 1
+            successThreshold: 1
